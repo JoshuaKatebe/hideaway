@@ -253,7 +253,7 @@ export default function ContactPage() {
                     <span className="text-amber-600 text-2xl mr-4">📞</span>
                     <div>
                       <p className="font-semibold text-gray-800">Phone</p>
-                      <p className="text-gray-600">+2+260768239726</p>
+                      <p className="text-gray-600">+260768239726</p>
                     </div>
                   </div>
                   <div className="flex items-center bg-white rounded-xl p-4 shadow-md">
@@ -319,7 +319,7 @@ export default function ContactPage() {
                     <span className="text-blue-600 text-2xl mr-4">📞</span>
                     <div>
                       <p className="font-semibold text-gray-800">Phone</p>
-                      <p className="text-gray-600">++260768239726</p>
+                      <p className="text-gray-600">+260768239726</p>
                     </div>
                   </div>
                   <div className="flex items-center bg-white rounded-xl p-4 shadow-md">
