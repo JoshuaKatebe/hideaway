@@ -424,7 +424,40 @@ export default function RoomsPage() {
             className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-12"
           >
             {rooms.map((room, index) => (
-              <RoomCard key={room.id} room={room} index={index} />
+              <motion.div
+                key={room.id}
+                variants={scaleIn}
+                whileHover={{ y: -10 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300"
+              >
+                <Link href={`/listings/lusaka/${room.id}`} className="block">
+                  <div className="relative h-64">
+                    <Image
+                      src={room.images[0] || "/Pic1.jpg"}
+                      alt={room.title}
+                      fill
+                      style={{ objectFit: "cover" }}
+                    />
+                    <div className="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-amber-600 font-bold">
+                      {room.price}/day
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">{room.title}</h3>
+                    <p className="text-gray-600 mb-4">{room.description}</p>
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm text-gray-500">{room.location}</span>
+                      <span className={`px-3 py-1 rounded-full text-xs font-bold uppercase ${
+                        room.status === 'available' 
+                          ? 'bg-green-100 text-green-800' 
+                          : 'bg-red-100 text-red-800'
+                      }`}>
+                        {room.status}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </motion.div>
 
